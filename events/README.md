@@ -5,3 +5,9 @@ While pub/subs like Redis can be used in any kind of processes independent f Nod
 
 Event emitter are used for smaller resource management.
 Pub/Sub are designed to handle larger amount of loads.
+
+Web Sockets also use EventEmitters to emit ws connection events like
+on("upgrade")
+on("open")
+on("close")
+on("error")
