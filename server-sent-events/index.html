@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSE Demo</title>
+  </head>
+  <body>
+    <p id="root" style="font-size: 50px; font-weight: bold"></p>
+    <script>
+      ;(function () {
+        const sse = new EventSource('http://localhost:3000/sse')
+        sse.onmessage = function (event) {
+          console.log('--SSE--', event)
+          const p = document.querySelector("p[id='root']")
+          if (p) {
+            p.textContent = event.data
+          }
+        }
+        sse.onerror = function (error) {
+          console.log('--SSE Error==', error)
+        }
+      })()
+    </script>
+  </body>
+</html>
