@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Worker Demo</title>
+  </head>
+  <body>
+    Web worker demo
+    <script>
+      ;(function () {
+        const worker = new window.Worker('./worker.js')
+        worker.postMessage({ shouldStartWork: true })
+        worker.onmessage = function (event) {
+          console.log('Message received by main thread:', event?.data)
+        }
+      })()
+    </script>
+  </body>
+</html>
