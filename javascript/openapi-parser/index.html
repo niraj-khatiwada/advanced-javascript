@@ -53,12 +53,19 @@
           }
           try {
             const doc = new DOMParser().parseFromString(html, 'text/html')
-            const elements = doc.querySelectorAll('meta[property]')
+            const metaPropertyElements = doc.querySelectorAll('meta[property]')
+            const metaNameElements = doc.querySelectorAll('meta[name]')
             const result = []
 
-            for (const el of elements) {
+            for (const el of metaPropertyElements) {
               result.push({
                 property: el.getAttribute('property'),
+                content: el.content,
+              })
+            }
+            for (const el of metaNameElements) {
+              result.push({
+                name: el.getAttribute('name'),
                 content: el.content,
               })
             }

@@ -1,4 +1,3 @@
-// const corsProxy = require('cors-anywhere')
 import corsProxy from 'cors-anywhere'
 
 const host = process.env.HOST || '127.0.0.1'
@@ -12,5 +11,5 @@ corsProxy
     removeHeaders: ['cookie', 'cookie2', 'x-cookie'],
   })
   .listen(port, host, function () {
-    console.log('Running CORS Anywhere on ' + host + ':' + port)
+    console.log('Cors proxy server running on ' + host + ':' + port)
   })
