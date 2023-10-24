@@ -11,8 +11,11 @@ class CustomEmitter extends EventEmitter {}
 
 const customEmitter = new CustomEmitter()
 
-customEmitter.addListener('work', function (a) {
+const handler = function (a) {
   console.log('Boss is calling.', a)
-})
+}
+customEmitter.addListener('work', handler)
 
 customEmitter.emit('work', 'Niraj')
+
+customEmitter.removeListener('work', handler)
