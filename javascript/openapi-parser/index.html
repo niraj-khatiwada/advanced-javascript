@@ -18,7 +18,9 @@
     <script type="module">
       ;(async function () {
         try {
-          const res = await fetch('http://localhost:8010/proxy') //url needs to be proxied since it might throw cors error
+          const res = await fetch(
+            'http://localhost:8080/https://medium.com/books-are-our-superpower/these-books-taught-me-how-to-set-healthy-boundaries-268d36fd2560'
+          ) // url needs to be proxied since it might throw cors error. See /nodejs/proxy-server/server.js for implementation
           if (res.status === 200) {
             let html = ''
             const reader = res.body.getReader()
