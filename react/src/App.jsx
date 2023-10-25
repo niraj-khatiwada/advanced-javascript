@@ -1,25 +1,12 @@
 import React from 'react'
 import './index.css'
 
+import Mock from './mocks/Mock'
+
 function App() {
   return (
     <div>
-      {React.cloneElement(
-        <button />,
-        {
-          onClick: function () {
-            console.log('Clicked')
-          },
-        },
-        <>Hello World</>
-      )}
-      {/* <button
-        onClick={function () {
-          console.log('Clicked')
-        }}
-      >
-        Hello World
-      </button> */}
+      <Mock />
     </div>
   )
 }
