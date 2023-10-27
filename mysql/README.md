@@ -7,7 +7,7 @@ ACID
 
 Subsets of SQL:
 
-- DDL: Data Definition Language
-- DML: Data Manipulation language
-- DCL: Data Control Language
-- TCL: Transaction Control Language
+- DDL: Data Definition Language -> CREATE TABLE, CREATE INDEX, ALTER TABLE, DROP TABLE, TRUNCATE TABLE etc
+- DML: Data Manipulation language -> INSERT, UPDATE, DELETE, etc
+- DCL: Data Control Language -> GRANT ACCESS, REVOKE, etc
+- TCL: Transaction Control Language -> BEGIN TRANSACTION, COMMIT, ROLLBACK, etc
