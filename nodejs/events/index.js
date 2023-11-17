@@ -7,7 +7,7 @@ const EVENT_NAME = 'HELLO'
 e.addListener(EVENT_NAME, handler)
 e.emit(EVENT_NAME, 'one', 'two')
 
-// Global Events
+// Global Event: process is a global event in nodejs
 process.on('SIGINT', () => {
   console.log('SIGINT', 'Gracefully shutting down.')
   process.exit(0)
