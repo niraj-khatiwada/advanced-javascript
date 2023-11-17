@@ -1,5 +1,6 @@
 import crypto from 'crypto'
 
+// Initialization Vector
 const IV_BYTE_LENGTH = 16
 const IV = crypto.randomBytes(IV_BYTE_LENGTH) // 32 hex character
 const SECRET_KEY = crypto
