@@ -1,3 +1,5 @@
+console.log(process.pid)
+
 process.on('message', function (msg) {
   console.log(msg)
   if (msg === 'START') {

@@ -2,6 +2,8 @@ import http from 'http'
 import { Readable, Transform } from 'stream'
 import fs from 'fs'
 
+import { Users } from './class/index'
+
 // Generate chunks on fly
 const readable = new Readable({
   read: function () {
