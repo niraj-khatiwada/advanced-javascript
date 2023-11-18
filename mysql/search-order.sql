@@ -1,12 +1,9 @@
--- search term is "niraj nj".
--- row with "niraj nj" must be sorted first and then the closest match should be sorted after that
--- Use sub-query inside ORDER BY FIELD to get that.
 SELECT
     *
 FROM
     `user`
 WHERE
-    user.first_name RLIKE "niraj|nj"
+    user.name RLIKE "niraj|khatiwada"
 ORDER BY
     FIELD(
         `id`,
@@ -14,8 +11,8 @@ ORDER BY
             SELECT
                 id
             FROM
-                `user`
+                user
             WHERE
-                user.first_name LIKE "%niraj nj%"
+                user.name LIKE "%niraj-khatiwada%"
         )
     ) DESC;

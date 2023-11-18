@@ -1,12 +1,7 @@
--- N = 1
--- Page = 1
--- Offset formula = (page - 1) * N
+-- (page-1) * limit
 SELECT
     *
 FROM
     `user`
-ORDER BY
-    `created_at` DESC,
-    `id` DESC
 LIMIT
-    1 OFFSET 3;
+    2 OFFSET 4;

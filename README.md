@@ -1,6 +1,7 @@
 Binge advanced concepts in Javascript. Includes:
-- JavaScript (obvio)
-- TypeScript
+
+- JavaScript
 - Node.js
 - React
-
+- TypeScript
+- MySQL
