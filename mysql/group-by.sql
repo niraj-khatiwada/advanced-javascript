@@ -12,4 +12,3 @@ WHERE
 GROUP BY
     `even_odd`
 HAVING
-    even_odd = "EVEN";

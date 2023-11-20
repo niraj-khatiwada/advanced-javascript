@@ -5,9 +5,7 @@ FROM
 -- Create Index
 CREATE INDEX name_idx ON user(`name`);
 
-SHOW INDEX
-FROM
-    user;
+SHOW INDEX user;
 
 -- Drop Index
 ALTER TABLE

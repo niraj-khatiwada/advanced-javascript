@@ -5,7 +5,6 @@ import http from 'http'
 console.log('Main Thread', process.pid)
 
 const CPU_LENGTH = os.cpus().length
-console.log(CPU_LENGTH)
 
 if (cluster.isPrimary) {
   for (let i = 0; i < CPU_LENGTH; i++) {

@@ -1,3 +1,7 @@
+-- Know which database is selected:
+SELECT
+    DATABASE();
+
 -- Create table
 CREATE TABLE credential(
     id INT PRIMARY KEY AUTO_INCREMENT,

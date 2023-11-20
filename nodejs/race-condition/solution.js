@@ -8,7 +8,6 @@ async function sleep(time) {
   return new Promise((resolve) => setTimeout(resolve, time))
 }
 
-async function withdraw(amount) {
   console.log('Is locked', mutex.isLocked())
   const release = await mutex.acquire()
   if (amount > balance) {

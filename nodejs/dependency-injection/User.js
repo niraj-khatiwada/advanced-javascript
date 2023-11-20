@@ -8,5 +8,4 @@ class User {
     return { id, name: 'Niraj' }
   }
 }
-
 export { User }

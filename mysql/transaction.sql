@@ -9,9 +9,7 @@ WHERE
     id = 1;
 
 SELECT
-    *
-FROM
-    credential;
+    * credential;
 
 ROLLBACK;
 
