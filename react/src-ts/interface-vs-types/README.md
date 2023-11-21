@@ -6,6 +6,7 @@
 - Types support function.
 - Type alias do not allow declaration merging
 - For tuples, always use type alias
+- Both support generics
 
 ### Interface
 
@@ -15,3 +16,4 @@
 - Interface support function.
 - Interface allow declaration merging
 - Tuples created with interface does not handle the number of elements, it just handles types. So avoid it.
+- Both support generics
