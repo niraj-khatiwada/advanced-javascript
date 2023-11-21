@@ -18,6 +18,7 @@ const ffi: FI = () => {}
 type B = { a: string; b: number }
 
 interface C extends B {}
+// type _C = B & { status: boolean }
 
 const abc: C = { a: 'ABC', b: 100 }
 

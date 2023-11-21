@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { ForwardedRefComponent } from './forward-ref/index'
+import { Provider } from './hooks/context'
 
 function App() {
-  return <ForwardedRefComponent></ForwardedRefComponent>
+  return <Provider />
 }
 
 export default App
