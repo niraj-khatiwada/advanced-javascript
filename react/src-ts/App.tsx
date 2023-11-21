@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Provider } from './hooks/context'
+import { Reducer } from './hooks/reducer'
 
 function App() {
-  return <Provider />
+  return <Reducer />
 }
 
 export default App
