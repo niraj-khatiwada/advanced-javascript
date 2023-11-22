@@ -1,4 +1,4 @@
-// You can provide the type information extending the TypeScrip declaration for a js file using JS Doc command
+// You can provide the type information extending the TypeScrip t declaration for a js file using JS Doc command
 
 /** @type {import("./config").Config} */
 
