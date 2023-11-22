@@ -8,10 +8,11 @@ function sql(query: TemplateStringsArray, ...args: any[]) {
     const arg = args[i]
     sanitizedQuery += queryString + JSON.stringify(arg ?? '')
   }
+  sanitizedQuery += query[query.length - 1]
   return sanitizedQuery
 }
 
 const id = 100
-const name = 'niraj; DROP TABLE user;'
+const name = 'Code For Real; DROP TABLE user;'
 
-console.log(sql`SELECT * FROM user WHERE id = ${id} AND name = ${name}`)
+console.log(sql`SELECT * FROM user WHERE id = ${id} AND name = ${name};`)
