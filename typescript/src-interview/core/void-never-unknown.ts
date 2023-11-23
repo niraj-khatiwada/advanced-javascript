@@ -4,6 +4,10 @@
     console.log('Doing something')
   }
 
+  // any
+  let ghi: any
+  ghi.length
+
   // Unknown
   let abc: unknown
   if (typeof abc === 'string' || Array.isArray(abc)) {
