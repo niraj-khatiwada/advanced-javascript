@@ -32,4 +32,22 @@
 
   const list = ['Hello']
   console.log(append('World')(list))
+
+  // Return data type of first element of an array
+  type First<T extends any[]> = T extends [] ? unknown : T[0]
+  // OR
+  // type First<T extends any[]> = T["length"] extends 0 ? unknown : T[0]
+
+  type list2 = [1, 2]
+  type list3 = ['A', 'B']
+
+  const dataTypeOfFirstElement: First<list2> = 1
+  const dataTypeOfFirstElement2: First<list3> = 'A'
+
+  // Find length of array type
+  type Length<T extends any[]> = T['length']
+
+  type list4 = [1, 2, 3]
+
+  const length1: Length<list4> = 3
 })()
