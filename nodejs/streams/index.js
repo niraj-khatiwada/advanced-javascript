@@ -1,29 +1,20 @@
-// Readable
-// Writable
-// Transfer
-
-import { Readable, Transform } from 'stream'
 import fs from 'fs'
 
-const readable = new Readable({
-  read: function () {
-    for (let i = 0; i < 100_000; i++) {
-      this.push(Buffer.from(i.toString()))
-    }
-    this.push(null)
-  },
-})
+import { Transform } from 'node:stream'
 
 const transform = new Transform({
-  transform: function (chunk, encoding, cb) {
-    // console.log('Encoding', encoding)
-    cb(null, chunk + Buffer.from('Niraj'))
+  transform: function (chunk, _, cb) {
+    console.log('---------\n', chunk.toString())
+    cb(null, chunk.toString() + 'Niraj')
   },
 })
 
-readable
+fs.createReadStream('./big.file')
   .pipe(transform)
   .pipe(fs.createWriteStream('./abc.txt'))
-  .on('end', function () {
-    console.log('File written successfully.')
+  // .on('data', function (chunk) {
+  //   console.log('\n', chunk.toString())
+  // })
+  .on('close', function () {
+    console.log('complete')
   })
