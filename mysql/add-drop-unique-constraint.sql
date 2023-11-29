@@ -2,7 +2,7 @@
 ALTER TABLE
     credential
 ADD
-    CONSTRAINT email UNIQUE(email);
+    CONSTRAINT `email` UNIQUE(email);
 
 -- DROP
 ALTER TABLE

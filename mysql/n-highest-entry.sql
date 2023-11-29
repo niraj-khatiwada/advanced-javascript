@@ -1,18 +1,17 @@
--- Insert n in place of 3 below
-WITH limits AS (
+WITH a AS (
     SELECT
         *
     FROM
-        `user`
+        user
     ORDER BY
         id DESC
     LIMIT
-        3
+        2
 )
 SELECT
     *
 FROM
-    limits
+    a
 ORDER BY
     id ASC
 LIMIT
