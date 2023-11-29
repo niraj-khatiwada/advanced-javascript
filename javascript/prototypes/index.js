@@ -14,9 +14,14 @@ console.log(obj.__proto__)
 // Function is an object in Javascript
 function sum() {}
 
+// Everything is an Object in JavaScript
 console.dir(sum.__proto__) // Prototype of function
 console.dir(sum.__proto__.__proto__) // Prototype of base object of a function
 console.log(obj.__proto__) // prototype of an object
+console.log('Niraj'.__proto__) // prototype of a String
+console.log('Niraj'.__proto__.__proto__) // Base object
+console.log((1).__proto__) // prototype of a Number
+console.log((1).__proto__.__proto__) // Base Object
 
 // Array is an object in JavaScript
 const array = []

@@ -30,4 +30,8 @@
 
   const list = ['Niaj', 26]
   const abc: TypeOfArrayItems<typeof list> = 100
+
+  // type Func<T> = T extends () => infer R ? R : unknown
+
+  // const func: Func<() => number>  = 100
 })()

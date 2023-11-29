@@ -1,7 +1,7 @@
-function Animal(name){
-    this.name = name
+function Animal(name) {
+  this.name = name
 }
 
-const tiger = new Animal("Tiger")
+const tiger = new Animal('Tiger')
 
-console.log(tiger)
+console.log(tiger.name)

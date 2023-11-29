@@ -7,3 +7,5 @@ set.add(1)
 console.log(set.size)
 console.log(set.has(1))
 console.log(set.delete(1))
+
+console.log(Array.from(set))
